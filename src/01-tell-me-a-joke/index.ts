@@ -2,9 +2,6 @@ import { ChatOpenAI } from "langchain/chat_models/openai";
 import { ChatPromptTemplate } from "langchain/prompts";
 import { StringOutputParser } from "langchain/schema/output_parser";
 
-import * as dotenv from "dotenv";
-dotenv.config();
-
 export const run = async () => {
   const prompt = ChatPromptTemplate.fromMessages([
     ["human", "Tell me a short joke about {topic}"],
