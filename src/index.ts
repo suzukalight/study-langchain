@@ -1,4 +1,4 @@
-import { run } from "./02-countries-zod";
+import { run } from "./03-embedding";
 
 import * as dotenv from "dotenv";
 dotenv.config();
