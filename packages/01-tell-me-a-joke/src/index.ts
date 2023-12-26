@@ -2,6 +2,9 @@ import { ChatOpenAI } from "langchain/chat_models/openai";
 import { ChatPromptTemplate } from "langchain/prompts";
 import { StringOutputParser } from "langchain/schema/output_parser";
 
+import * as dotenv from "dotenv";
+dotenv.config();
+
 export const run = async () => {
   const prompt = ChatPromptTemplate.fromMessages([
     ["human", "Tell me a short joke about {topic}"],
@@ -20,6 +23,7 @@ export const run = async () => {
   console.log(response);
 };
 
+run();
 /**
 Why did the ice cream go to the gym?
 Because it wanted to get a little "cone"ditioning!

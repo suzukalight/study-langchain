@@ -7,6 +7,9 @@ import {
   OutputFixingParser,
 } from "langchain/output_parsers";
 
+import * as dotenv from "dotenv";
+dotenv.config();
+
 export const run = async () => {
   const outputParser = StructuredOutputParser.fromZodSchema(
     z
@@ -48,11 +51,13 @@ export const run = async () => {
   });
 
   const result = await answerFormattingChain.call({
-    query: "8カ国ぶん教えてください。日本語名で回答してください",
+    query: "5カ国ぶん教えてください。日本語名で回答してください",
   });
 
   console.log(JSON.stringify(result.records, null, 2));
 };
+
+run();
 /*
 [
   {
