@@ -1,0 +1,27 @@
+{
+  "name": "@langchain-study/ollama-local",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "type": "module",
+  "author": "suzukalight <mail@mkubara.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.0.16",
+    "@xenova/transformers": "^2.13.4",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1",
+    "hnswlib-node": "^2.1.0",
+    "langchain": "^0.0.212",
+    "openai": "^4.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
